@@ -82,6 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                                 _emailController.text,
                                 _passwordController.text);
                             if (value) {
+                              controller.logged = value;
                               ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(content: Text('User ok')));
                             } else {
